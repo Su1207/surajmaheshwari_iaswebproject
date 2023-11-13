@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Section</title>
+  </head>
+  <body>
+    <div>
+      <form method="POST" action="/add-question">
+        <label>Enter your Question</label>
+        <input type="text" name="title" placeholder="Title" />
+        <input type="text" name="question" placeholder="Question" />
+        <textarea type="text" name="answer" placeholder="Answer"></textarea>
+        <input type="file" id="image" name="image" accept="image/*" />
+        <input type="text" name="url" placeholder="https://example.com" />
+        <input type="date" name="date" placeholder="Submit Time" />
+        <input type="text" name="subject" placeholder="Subject" />
+        <input type="text" name="topic" placeholder="Topic" />
+        <button type="submit" value="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

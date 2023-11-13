@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <% if (locals.questions) { %> console.log(questions);
+    <div>
+      <% questions.forEach(question => { %>
+      <h4><%= question.title %></h4>
+      <p><%= question.questionText %></p>
+      <p><%= question.url %></p>
+      <% }) %>
+    </div>
+    <% } %>
+  </body>
+</html>
