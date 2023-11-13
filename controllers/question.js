@@ -26,10 +26,7 @@ const asyncHandler = require("express-async-handler");
 
 const getQuestions = asyncHandler(async (req, res) => {
   const Questions = await Question.find({});
-  res.render("home", {
-    questions: Questions,
-  });
-  // res.status(200).json(Questions);
+  res.status(200).json(Questions);
 });
 
 // const getContact = (req, res) => {
@@ -50,7 +47,7 @@ const createQuestion = asyncHandler(async (req, res) => {
     throw new Error("All Fields are mandatory");
   }
 
-  const questions = await Question.create({
+  const question = await Question.create({
     title,
     questionText,
     answer,
@@ -59,7 +56,8 @@ const createQuestion = asyncHandler(async (req, res) => {
     subject,
     topic,
   });
-  res.status(201).json(questions);
+  // res.status(201).json(questions);
+  return res.render("home", {});
 });
 
 const getQuestion = asyncHandler(async (req, res) => {

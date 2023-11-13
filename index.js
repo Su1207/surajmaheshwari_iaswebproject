@@ -5,6 +5,7 @@ const questionRoute = require("./routes/question");
 const path = require("path");
 const errorHandler = require("./middleware/errorHandler");
 const connectDb = require("./dbConnect");
+const staticRoute = require("./routes/staticRoute");
 // const multer = require("multer"); // For handling file uploads
 const dotenv = require("dotenv").config(); // Load environment variables from .env file
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(errorHandler);
 
 app.use("/ask-question", questionRoute);
+app.use("/", staticRoute);
 
 // set the view engine to ejs
 app.set("view engine", "ejs");

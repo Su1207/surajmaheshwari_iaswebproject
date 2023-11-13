@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Section</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
     <div>
-      <form method="POST" action="/add-question">
+      <form method="POST" action="/ask-question">
         <label>Enter your Question</label>
         <input type="text" name="title" placeholder="Title" />
-        <input type="text" name="question" placeholder="Question" />
+        <input type="text" name="questionText" placeholder="Question" />
         <textarea type="text" name="answer" placeholder="Answer"></textarea>
-        <input type="file" id="image" name="image" accept="image/*" />
+        <!-- <input type="file" id="image" name="image" accept="image/*" /> -->
         <input type="text" name="url" placeholder="https://example.com" />
-        <input type="date" name="date" placeholder="Submit Time" />
+        <!-- <input type="date" name="submitTime" placeholder="Submit Time" /> -->
         <input type="text" name="subject" placeholder="Subject" />
         <input type="text" name="topic" placeholder="Topic" />
         <button type="submit" value="submit">Submit</button>
